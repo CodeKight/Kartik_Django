@@ -1,0 +1,24 @@
+#Mam github: 
+https://github.com/di-a7/kartik_djagno
+
+
+Table: Todolist
+
+- title      - character 
+- description 
+- time 
+- priority 
+- status 
+
+
+#At first define models in models.py file, then 
+
+#To create migration file: 
+ python manage.py makemigrations
+
+ Note: firt put the name of folder like: todolist in the Installed apps in Setting then create makemigrations
+
+ #To migrate: 
+ python manage.py migrate
+
+ #Now open dbsqlite after installing SQLite Viewer Extension 
