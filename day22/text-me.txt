@@ -1,0 +1,171 @@
+python manage.py shell  : to create python saperate shell 
+
+>>> from todolist.models import Todo
+>>> Todo.objects.all()
+
+model_name.objects.all()  : Data in the model are displayed 
+model_name.objects.create(title = "", description = "..", field1="", ,,) : 
+
+--Created object: 
+ -- Todo.objects.create(title="first", description="this is desc", status="False")
+
+#To fetch data: 
+ Todo.objects.all()  : to fetch the created data form database 
+
+ >>> Todo.objects.get(id=2)
+ >>> Todo.objects.get(id=2).values()
+
+ --Todo.objects.get(id=13).delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -----------------------hystroy----------------
+
+ 
+USER@Max MINGW64 ~/OneDrive/Desktop/Django (master)
+$
+ *  History restored 
+
+
+USER@Max MINGW64 ~/OneDrive/Desktop/Django (master)
+$ git remote
+origin
+
+USER@Max MINGW64 ~/OneDrive/Desktop/Django (master)
+$ python manage.py shell 
+13 objects imported automatically (use -v 2 for details).
+
+Ctrl click to launch VS Code Native REPL
+Python 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from todolist.models import Todo
+>>> Todo.objects.all()
+<QuerySet []>
+>>> Todo.objects.create(title="first", description="this is desc", status="False")
+<Todo: Todo object (1)>
+>>> Todo.objects.create(title="second", description="this is desc", status="False")
+<Todo: Todo object (2)>
+>>> Todo.objects.create(title="third", description="this is desc", status="False"))
+  File "<console>", line 1
+    Todo.objects.create(title="third", description="this is desc", status="False"))
+                                                                                  ^
+SyntaxError: unmatched ')'
+>>> Todo.objects.create(title="third", description="this is desc", status="False"))
+  File "<console>", line 1
+    Todo.objects.create(title="third", description="this is desc", status="False"))
+                                                                                  ^
+SyntaxError: unmatched ')'
+>>> Todo.objects.create(title="third", description="this is desc", status="False"))
+  File "<console>", line 1
+    Todo.objects.create(title="third", description="this is desc", status="False"))
+                                                                                  ^
+SyntaxError: unmatched ')'
+>>> Todo.objects.create(title="third", description="this is desc", status="False"))
+  File "<console>", line 1
+    Todo.objects.create(title="third", description="this is desc", status="False"))
+                                                                                  ^
+SyntaxError: unmatched ')'
+>>> Todo.objects.create(title="third", description="this is desc", status="False"))
+  File "<console>", line 1
+    Todo.objects.create(title="third", description="this is desc", status="False"))
+                                                                                  ^
+SyntaxError: unmatched ')'
+>>> Todo.objects.create(title="third", description="this is desc", status="False"))
+  File "<console>", line 1
+    Todo.objects.create(title="third", description="this is desc", status="False"))
+                                                                                  ^
+SyntaxError: unmatched ')'
+>>> Todo.objects.create(title="third", description="this is desc", status="False") 
+<Todo: Todo object (3)>
+>>>  Todo.objects.all()
+  File "<console>", line 1
+    Todo.objects.all()
+IndentationError: unexpected indent
+>>> Todo.objects.all()
+<QuerySet [<Todo: Todo object (1)>, <Todo: Todo object (2)>, <Todo: Todo object (3)>]>
+>>>  Todo.objects.get(id=3)
+  File "<console>", line 1
+    Todo.objects.get(id=3)
+IndentationError: unexpected indent
+>>> Todo.objects.get(id=2)
+<Todo: Todo object (2)>
+>>> Todo.objects.get(id=2).values()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Todo' object has no attribute 'values'
+>>> Todo.objects.get(id=2).value() 
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Todo' object has no attribute 'value'
+>>> Todo.objects.all().values()    
+<QuerySet [{'id': 1, 'title': 'first', 'description': 'this is desc', 'status': False}, {'id': 2, 'title': 'second', 'description': 'this is desc', 'status': False}, {'id': 3, 'title': 'third', 'description': 'this is desc', 'status': False}]> 
+>>> a = Todo.objects.get(id=3)
+>>> a.title
+'third'
+>>> a.status
+False
+>>> a.status=True
+>>> a.status
+True
+>>> a.save()  
+>>>  a.delete()
+  File "<console>", line 1
+    a.delete()
+IndentationError: unexpected indent
+>>> a.delete()
+(1, {'todolist.Todo': 1})
+>>>   Todo.objects.filter(status=True)
+  File "<console>", line 1
+    Todo.objects.filter(status=True)
+IndentationError: unexpected indent
+>>>   Todo.objects.filter(status=True)
+  File "<console>", line 1
+    Todo.objects.filter(status=True)
+IndentationError: unexpected indent
+>>>   Todo.objects.filter(status=False)
+  File "<console>", line 1
+    Todo.objects.filter(status=False)
+IndentationError: unexpected indent
+>>> Todo.objects.filter(title="first")
+<QuerySet [<Todo: Todo object (1)>]>
+>>> Todo.objects.filter(title="first").values()
+<QuerySet [{'id': 1, 'title': 'first', 'description': 'this is desc', 'status': False}]>
+>>> Todo.objects.filter(status=False)
+<QuerySet [<Todo: Todo object (1)>, <Todo: Todo object (2)>]>
+>>> Todo.objects.filter(status=False).values()
+<QuerySet [{'id': 1, 'title': 'first', 'description': 'this is desc', 'status': False}, {'id': 2, 'title': 'second', 'description': 'this is desc', 'status': False}]>
+>>> a.title                    
