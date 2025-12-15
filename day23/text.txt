@@ -1,0 +1,46 @@
+1. templete folder was created and home.html file was created inside it. 
+2. templete folder path was added to the main project's setting file:
+
+                  'DIRS': [BASE_DIR/'templates'],
+
+3. then in the view file of todo, this was changed:
+
+                
+        def home(request):
+            user = [
+
+            {"name": "Ram Sharma", "age": 25, "address": "Kathmandu"},
+            {"name": "Sita Rai", "age": 22, "address": "Pokhara"},
+            {"name": "Hari Thapa", "age": 28, "address": "Lalitpur"},
+            {"name": "Gita Karki", "age": 24, "address": "Bhaktapur"},
+            {"name": "Nabin Adhikari", "age": 30, "address": "Chitwan"},
+            {"name": "Asha Gurung", "age": 21, "address": "Butwal"},
+            {"name": "Ramesh Poudel", "age": 35, "address": "Biratnagar"},
+            {"name": "Mina Shrestha", "age": 27, "address": "Dharan"},
+            {"name": "Kiran Joshi", "age": 29, "address": "Hetauda"},
+            {"name": "Sunita Bhandari", "age": 26, "address": "Nepalgunj"}
+
+
+        ]
+
+            a="welcome to the page "
+            context = {
+                "title": "Homepage ",
+                "first_line":a,
+                "second_line":"This is home funciton. ",
+                "people":user
+            }
+            return render(request, 'home.html',context)
+
+
+4. Nothing was done to urls.py
+
+5. the server was started and run with the boiler plate code of html
+
+   *Change the languge form django to html by clicking at the bottom bar. 
+
+6. Used bootstrap in html file to show talbe 
+
+7. Used keys of context and for loop to take data dynamically. 
+
+
