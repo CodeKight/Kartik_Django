@@ -1,11 +1,12 @@
 from django.urls import path
-from .views import first,home,about_us,contact  # or *  #Import functions form views file
+from .views import first,home,about_us,contact, task # or *  #Import functions form views file
 
 urlpatterns = [
     path('first/', first),
     path('home/', home),
     path('about_us/', about_us),
-     path('contact/', contact)
+     path('contact/', contact),
+     path('task/', task)
 ]
 
 
