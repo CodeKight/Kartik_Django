@@ -1,0 +1,12 @@
+1. contact.html created 
+  -function is defined (in views.py)
+  -path is added (in urls.py)
+  -variable is called from view.py to add data dynamically  
+
+   
+2. base.html created and put in contact.html and home.html [**No need to add file path in setting template, only folder path]
+
+3. task.html created
+   -function definition in views.py
+   -path adding in urls.py
+   -variable from view.py is used in task.html for dynamic data addition
