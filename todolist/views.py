@@ -67,12 +67,12 @@ def task_create(request):
             context = {
                 "error":" Both fields are requeired"
             }
-            return render(request, 'create_task.html', context)
+            return render(request, 'task_create.html', context)
         Todo.objects.create(title = title1, description = description1)
         
         return redirect('/task/')
     
-    return render(request, 'create_task.html')
+    return render(request, 'task_create.html')
 
 
 def task_edit(request):
@@ -83,9 +83,9 @@ def task_edit(request):
             context = {
                 "error":" Both fields are requeired"
             }
-            return render(request, 'edit_task.html', context)
+            return render(request, 'task_edit.html', context)
         Todo.objects.create(title = title1, description = description1)
         
         return redirect('/task/')
     
-    return render(request, 'edit_task.html')
+    return render(request, 'task_edit.html')
