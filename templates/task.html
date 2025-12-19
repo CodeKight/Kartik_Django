@@ -29,7 +29,16 @@
 
       <td> {{i.description}} </td>
 
-      <td> {{i.status}} </td>
+      <td> 
+        
+        {% if i.status %} 
+        
+        <span class='text-success'> Completed </span>
+        {%else%}
+        <span class="text-danger">Pending </span> 
+          {%endif%}
+        
+        </td>
     </tr>
 
     {%endfor%}

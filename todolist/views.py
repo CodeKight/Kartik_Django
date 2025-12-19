@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Todo
 
@@ -48,6 +48,7 @@ def task(request):
     total_task=task.count()
     completed=task.filter(status=True).count()
     incompleted=task.filter(status=False).count()
+    print("Completed: ", completed)  # First runserver, then refresh the browser and see the terminal
     
     context={
         "task":task,
@@ -57,3 +58,34 @@ def task(request):
         
     }
     return render(request, 'task.html', context)
+
+def task_create(request):
+    if request.method == "POST":
+        title1=request.POST.get('title')
+        description1=request.POST.get('description')
+        if title1 == "" or description1 == "": 
+            context = {
+                "error":" Both fields are requeired"
+            }
+            return render(request, 'create_task.html', context)
+        Todo.objects.create(title = title1, description = description1)
+        
+        return redirect('/task/')
+    
+    return render(request, 'create_task.html')
+
+
+def task_edit(request):
+    if request.method == "POST":
+        title1=request.POST.get('title')
+        description1=request.POST.get('description')
+        if title1 == "" or description1 == "": 
+            context = {
+                "error":" Both fields are requeired"
+            }
+            return render(request, 'edit_task.html', context)
+        Todo.objects.create(title = title1, description = description1)
+        
+        return redirect('/task/')
+    
+    return render(request, 'edit_task.html')

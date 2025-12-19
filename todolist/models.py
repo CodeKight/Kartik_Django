@@ -9,5 +9,6 @@ class Todo(models.Model):
     status = models.BooleanField(default=True)
     
     
+    
  
     

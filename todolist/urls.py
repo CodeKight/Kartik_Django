@@ -1,12 +1,14 @@
 from django.urls import path
-from .views import first,home,about_us,contact, task # or *  #Import functions form views file
+from .views import first,home,about_us,contact, task,task_create, task_edit # or *  #Import functions form views file
 
 urlpatterns = [
     path('first/', first),
     path('home/', home),
     path('about_us/', about_us),
-     path('contact/', contact),
-     path('task/', task)
+    path('contact/', contact),
+    path('task/', task),
+    path('task/create', task_create),
+    path('task/edit', task_edit),
 ]
 
 

@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block title%} Create Task {%endblock title%}
+
+{% block body %} 
+
+
+<form method = "POST" >
+  {% csrf_token %} 
+   
+{% if error %}
+<div class="alert alert-danger" role="alert">
+  {{ error }}
+</div>
+{% endif %}
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" name="title">
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea class="form-control" id="description" rows="4"  name="description"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+{%endblock body%}
