@@ -1,0 +1,14 @@
+API:  
+
+Rest framework: DRF
+
+- pip install djangorestframework
+--add in installed apps
+
+go to view
+
+
+
+#Reataurant Management System. 
+
+#kun kun tables

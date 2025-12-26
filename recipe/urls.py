@@ -1,5 +1,14 @@
+# from django.urls import path
+
+# urlpatterns = [
+   
+# ]
+
+
+
+
 from django.urls import path
-from .views import first,home,about_us,contact, task,task_create, task_edit, task_display # or *  #Import functions form views file
+from .views import first,home,about_us,contact, task,task_create, task_edit # or *  #Import functions form views file
 
 urlpatterns = [
     path('first/', first),
@@ -10,7 +19,6 @@ urlpatterns = [
     path('task/create', task_create),
     path('task/edit', task_edit),
     path('task/<id>/edit', task_edit),
-    path('api/task/', task_display),
 ]
 
 

@@ -1,0 +1,17 @@
+#admin costomization
+
+
+creae user:
+  python manage.py
+  py manage.py superusser
+
+
+# Register your models here.
+
+in admin.py of todolist: 
+admin.site.register(Todo)
+
+
+#Complete recipe website
+
+#Create portfolio 

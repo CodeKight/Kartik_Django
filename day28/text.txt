@@ -1,0 +1,12 @@
+
+To store the packages is one file. 
+
+pip freeze > requirements.txt  , freeze or list out all the packages used in the specific projects 
+pip install python-dotenv: new packages
+pip install -r requirements.txt 
+pip uninstall -r requirements.txt 
+
+load_dotenv , do it  fisrt 
+import os
+os.getenv('SECRET KEY')
+os.getenv('DEBUG')

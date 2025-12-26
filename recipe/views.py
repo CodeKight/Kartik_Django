@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import Todo
+from todolist.models import Todo
 
 # Create your views here.
 def first(request):
@@ -101,17 +101,3 @@ def task_edit(request,id):
     
     
     return render(request, 'task_edit.html', context)
-
-
-
-#API:
-
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from .serializer import TaskSerializer
-
-@api_view(['GET','POST'])      #same as aip_view(task_display), calling and passing like sth.        #in post, a textbox will appear          
-def task_display(request):
-    todo=Todo.objects.all()
-    serializer = TaskSerializer(todo, many=True)  #many=True for multiple value to pass
-    return Response(serializer.data)
